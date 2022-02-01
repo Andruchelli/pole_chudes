@@ -3,8 +3,8 @@ from loader import Loader
 from task import Task
 
 class Engine:
-    def __init__(self, tries = 10):
-        loader = Loader()
+    def __init__(self, filename, tries = 10):
+        loader = Loader(filename)
         # Подготавливаем все задания (впрочем, можно сначала выбирать 1 задание, а потом подготавливать только его)
         all_tasks = self.__prepare_tasks(loader.load())
 
