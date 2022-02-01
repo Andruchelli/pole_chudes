@@ -6,11 +6,11 @@ class Loader:
         # Можно также принимать аргумент "сложность". В этом случае в зависимости от сложности
         # вопросы грузятся из файла teen.yml, adult.yml и т.д.
         # pass
-        self.tasks = self.load(filename)
+        self.filename = filename
 
-    def load(self, filename):
+    def load(self):
         # сделать загрузку из файла
-        file = open(filename, 'r', encoding="utf8")
+        file = open(self.filename, 'r', encoding="utf8")
         return yaml.safe_load(file.read())
 
         # return (
